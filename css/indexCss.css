@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: #520120; /* Primary header color */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFFFFF;
+    border-bottom: 2px solid #520120;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #024959; /* Dark teal */
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s linear;
+}
+
+nav ul li a:hover {
+    color: #717070; /* Grayish color for hover */
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    width: 90%;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    color: #08403E; /* Dark Green */
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    color: #08403E; /* Dark Green */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: #A5A5A5; /* Light gray for paragraph */
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #962B09; /* Rust Red */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    article h3, article p {
+        text-align: left;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    section {
+        width: 100%;
+    }
+}
+
+
