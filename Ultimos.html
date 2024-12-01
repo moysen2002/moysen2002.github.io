@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizador de Recursos Uniformes y Bases de Datos</title>
+   <link rel="stylesheet" href="css/UltCSS.css"> 
+</head>
+<body>
+    <header>
+        <h1>Conceptos Clave: URLs y Bases de Datos</h1>
+        <p>Explorando la estructura web y la configuración de bases de datos</p>
+    </header>
+    <nav>
+        <ul>
+			<li><a href="index.html">Menu Principal</a></li>
+            <li><a href="#que-es">¿Qué es un URL?</a></li>
+            <li><a href="#componentes">Componentes de un URL</a></li>
+            <li><a href="#ejemplos">Ejemplos</a></li>
+            <li><a href="#importancia">Importancia</a></li>
+            <li><a href="#configuracion-mysql">Configuración de MySQL</a></li>
+            <li><a href="#conexion-base-datos">Conexión a una base de datos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="que-es">
+            <h2>¿Qué es un URL?</h2>
+            <p>Un Localizador de Recursos Uniformes (URL) es una dirección única que identifica un recurso en Internet, como una página web, una imagen o un documento.</p>
+        </section>
+        <section id="componentes">
+            <h2>Componentes de un URL</h2>
+            <ul>
+                <li><strong>Protocolo:</strong> Indica cómo se debe acceder al recurso (ej., <code>http</code>, <code>https</code>).</li>
+                <li><strong>Dominio:</strong> La dirección principal del sitio web (ej., <code>www.ejemplo.com</code>).</li>
+                <li><strong>Ruta:</strong> Especifica la ubicación del recurso dentro del servidor (ej., <code>/productos</code>).</li>
+            </ul>
+        </section>
+        <section id="ejemplos">
+            <h2>Ejemplos de URLs</h2>
+            <p>Algunos ejemplos de URLs comunes:</p>
+            <ul>
+                <li><a href="https://www.google.com" target="_blank">https://www.google.com</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/URL" target="_blank">https://es.wikipedia.org/wiki/URL</a></li>
+                <li><a href="https://www.youtube.com" target="_blank">https://www.youtube.com</a></li>
+            </ul>
+        </section>
+        <section id="importancia">
+            <h2>¿Por qué son importantes los URLs?</h2>
+            <p>Los URLs son esenciales para acceder a los recursos en Internet de manera eficiente, permitiendo a los usuarios navegar y compartir información fácilmente.</p>
+        </section>
+        <section id="configuracion-mysql">
+            <h2>Configuración de Base de Datos MySQL en el Servidor Web</h2>
+            <p>Para configurar una base de datos MySQL en un servidor web, sigue estos pasos básicos:</p>
+            <ol>
+                <li>Instala MySQL en el servidor (utiliza comandos como <code>sudo apt install mysql-server</code> en Linux).</li>
+                <li>Accede al cliente MySQL con <code>mysql -u root -p</code>.</li>
+                <li>Crea una base de datos con el comando: <code>CREATE DATABASE nombre_base_datos;</code>.</li>
+                <li>Crea un usuario y asigna permisos: 
+                    <pre>
+CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'contraseña';
+GRANT ALL PRIVILEGES ON nombre_base_datos.* TO 'usuario'@'localhost';
+FLUSH PRIVILEGES;
+                    </pre>
+                </li>
+            </ol>
+            <p>¡Con esto, tu base de datos estará lista para usarse!</p>
+        </section>
+        <section id="conexion-base-datos">
+            <h2>Conexión de Base de Datos en la Web</h2>
+            <p>Para conectar tu aplicación web a una base de datos MySQL, puedes utilizar PHP. Aquí tienes un ejemplo de código básico:</p>
+            <pre>
+&lt;?php
+$servidor = "localhost";
+$usuario = "usuario";
+$contraseña = "contraseña";
+$base_datos = "nombre_base_datos";
+
+$conexion = new mysqli($servidor, $usuario, $contraseña, $base_datos);
+
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+}
+echo "Conexión exitosa a la base de datos.";
+?&gt;
+            </pre>
+            <p>Asegúrate de sustituir los valores de <code>$servidor</code>, <code>$usuario</code>, <code>$contraseña</code> y <code>$base_datos</code> por los correctos para tu configuración.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Creado por Ismael Martinez Moysen | &copy; 2024</p>
+    </footer>
+</body>
+</html>
+
